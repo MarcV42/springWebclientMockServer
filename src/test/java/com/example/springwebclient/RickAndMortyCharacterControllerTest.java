@@ -33,7 +33,7 @@ class RickAndMortyCharacterControllerTest {
         mockWebServer.start();
     }
 
-    // hier ist die Umleitung
+    // hier ist die Umleitung...die Echte adresse im Internet wird mit internen Serveradresse überschrieben DynamicProperties
     @DynamicPropertySource
     static void setUrlDynamically(DynamicPropertyRegistry registry) {
         registry.add("rickandmorty.api.url", () -> mockWebServer.url("/").toString());
