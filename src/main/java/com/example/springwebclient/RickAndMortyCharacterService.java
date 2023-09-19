@@ -13,6 +13,8 @@ public class RickAndMortyCharacterService {
 
     private final WebClient webClient;
 
+    //Im Konstruktor wird der Value ${rickandmorty.api.url aus der property dateil geladen und dem Webclient
+    // als adresse mitgegeben
     public RickAndMortyCharacterService(@Value("${rickandmorty.api.url}") String url) {
         webClient = WebClient.create(url);
     }

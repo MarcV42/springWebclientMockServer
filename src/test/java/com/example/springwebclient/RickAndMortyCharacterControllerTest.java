@@ -33,6 +33,7 @@ class RickAndMortyCharacterControllerTest {
         mockWebServer.start();
     }
 
+    // hier ist die Umleitung
     @DynamicPropertySource
     static void setUrlDynamically(DynamicPropertyRegistry registry) {
         registry.add("rickandmorty.api.url", () -> mockWebServer.url("/").toString());
@@ -59,7 +60,7 @@ class RickAndMortyCharacterControllerTest {
                         ]
                         }
                         """));
-
+//Expected
         mockMvc.perform(MockMvcRequestBuilders.get("/api/characters"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("""
