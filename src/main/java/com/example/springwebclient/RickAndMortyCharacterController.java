@@ -10,6 +10,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RickAndMortyCharacterController {
 
+
     private final RickAndMortyCharacterService rickAndMortyCharacterService;
 
     @GetMapping
